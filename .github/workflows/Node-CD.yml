@@ -27,7 +27,13 @@ jobs:
         fail_on_empty: true
           
           echo ${{ github.workspace }}
-    - run: cp /home/runner/work/NodeJSSample/NodeJSSample/.env.development1 ./.env.development
+    
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v3
+      with:
+        name: env-artifact
+        path: ./.env.development
+        retention-days: 5
    
     #- name: copy file
     #  uses: canastro/copy-file-action@master

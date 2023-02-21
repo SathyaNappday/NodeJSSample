@@ -27,6 +27,7 @@ jobs:
         fail_on_empty: true
           
           echo ${{ github.workspace }}
+    - run: cp /home/runner/work/NodeJSSample/NodeJSSample/.env.development ./.env.development
    
     #- name: copy file
     #  uses: canastro/copy-file-action@master

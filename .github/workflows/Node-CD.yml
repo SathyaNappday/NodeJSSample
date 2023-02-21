@@ -35,6 +35,12 @@ jobs:
         name: .env.development
         path: /home/runner/work/NodeJSSample/NodeJSSample/env
         retention-days: 5
+        
+    - name: Download a single artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: .env.development
+
    
     #- name: copy file
     #  uses: canastro/copy-file-action@master
